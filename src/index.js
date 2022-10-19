@@ -4,10 +4,14 @@ import './index.css'
 import App from './App'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
-const root = ReactDOM.createRoot(document.getElementById('root'))
+import UserContext from './Contexts/UserContext'
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <>
-    <ToastContainer position='top-center' />
-    <App />
+    <UserContext>
+      <ToastContainer position="top-center" />
+      <App />
+    </UserContext>
   </>
-)
+);
